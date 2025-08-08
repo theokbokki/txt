@@ -1,0 +1,80 @@
+Welcome to my txt only website! 
+
+Search for "How to use this website" (⌘-F on Mac and Ctrl+F on Windows) for 
+tips and tricks as well as explanation on how this website works. 
+
+————————————————————————————————————————————————————————————————————————————————
+
+All topics
+
+————————————————————————————————————————————————————————————————————————————————
+
+How to use this website:
+
+- You can search for stuff by using your computers default search (⌘-F on Mac 
+and Ctrl+F on Windows).
+
+- Each post is ordered from the most recent to the oldest. 
+
+- Each post has at least one topic, you can find the list of all topics by 
+searching for "All topics".
+
+————————————————————————————————————————————————————————————————————————————————
+
+How does this work:
+
+It is actually incrediby simple!
+This website is a simple `.txt` file being rendered by your browser, because 
+browsers can do that and it doesn't look too bad.
+There is only a super thin layer of PHP used to serve the file at the `/` path 
+and to tell the browser to use UTF-8 encoding to be able to render emojis and 
+diacritics among others.
+
+```
+// index.php
+
+<?php
+
+header('Content-Type: text/plain; charset=utf-8');
+
+readfile(__DIR__.'/content.txt');
+exit;
+```
+
+There is also a tiny Makefile that is used for wraping the lines at 80ch which 
+improves readability.
+It uses the `fold` utility which is there by default on unix systems.
+
+```
+# Makefile
+
+CONTENT = ./public/content.txt
+BACKUP = ./content.txt.bak
+
+wrap:
+	cp $(CONTENT) $(BACKUP)
+	TEMP=$$(mktemp) && \
+	fold -s -w 80 $(CONTENT) > $$TEMP && \
+	mv $$TEMP $(CONTENT)
+```
+
+You can find the source code on GitHub — https://github.com/theokbokki/txt
+
+————————————————————————————————————————————————————————————————————————————————
+
+Why do this?
+
+Because I like simple stuff. It is easy to make, easy to maintain, easy to use, 
+weighs nothing, loads fast and it looks alright. 
+What I want is a place to share my thoughts in writing, nothing more nothing 
+less and this can easily acheive that.
+I guess that not having images or links is a bit of a bummer, but I'm fine with 
+this, I have another much more complete website for fancy stuff.
+
+————————————————————————————————————————————————————————————————————————————————
+
+Legal:
+
+No cookies, no tracking, do whatever you want with this as long as you don't 
+deform what I say. If you have a problem with something on this website, you 
+can contact me at hello@theoo.dev.
