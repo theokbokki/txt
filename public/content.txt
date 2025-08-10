@@ -7,7 +7,7 @@ ADULT SKILLS
 
 10-08-2025
 
-Topics: Life, Thoughts
+Topics: Life, Thoughts, Society
 
 I have been considered an adult for a few years now, that's to say I've had my 
 own place away from my mother's for a while. And I've noticed something, there 
@@ -155,6 +155,11 @@ designers do a pretty dang good job.
 [^3] — Again, very debatable, I don't always feel comfortable with this opinion.
 
 ALL TOPICS
+
+- Browsers 
+- Life
+- Thoughts
+- Society
 
 HOW TO USE THIS WEBSITE:
 
