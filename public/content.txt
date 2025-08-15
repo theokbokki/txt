@@ -3,6 +3,75 @@ Welcome to my txt only website!
 Search for "How to use this website" (⌘-F on Mac and Ctrl+F on Windows) for 
 tips and tricks as well as explanation on how this website works. 
 
+NOT WANTING TO DO ANYTHING
+
+15-08-2025
+
+Topics: Life
+
+I'm on holiday, it's hot, too hot[^1] and I don't want to do anything.
+So I'm forcing myself to write a little something on this blog while I wait for 
+the time to go get dinner, Vegan Chineese takeout for those who like details. I 
+don't know where this is gonna go, the rule for this page was that there is no 
+minimum length per post, but so far I've been pretty generous on my word 
+counts, so I might just talk about stuff for a while and see where this takes 
+us.
+Maybe a good subject would be this website. I'm starting to like it more and 
+more, it has been freeing in a creative way to have a place to write down 
+whatever I want without having to polish anything[^2], I just sit at my 
+computer and write whatever goes through my mind.
+This is also a great website for many other reasons, it is tiny[^3] so that 
+means people don't have to download a lot of stuff to read what I have to say, 
+it looks great, at least to me. I like the plain text vibe, I just wish there 
+was some more line height and maybe a tiny bit more padding, but I can deal 
+with this. It also is super low maintenance, plaintext is probably not gonna 
+stop working any time soon, and I don't really have to update anything else 
+appart from the content.
+
+But the problem of this website is that it isn't accessible. All the content is 
+inside a pre tag, this makes it so that screen readers have no clue what's 
+going on, they will just read everything in the same way. No infos about lists, 
+or dates, no quick skip link, no links for footnotes, no metadata to give 
+context,... The plaintext, monospaced cramped aesthetic, which I find so cool, 
+can also be a challenge to people with cognitive difficulties, the lack of 
+visual queues and the monotony of it all can make it impossible for them to 
+read comfortably. And I'm sure there are so many other things I'm not thinking 
+about that make this website not accessible.
+
+And I don't want it to be this way, especially since there is a simple and 
+obvious solution, write the website using markdown and parse it as HTML before 
+uploading it. That would require some refactoring and make the code even 
+simpler (no more PHP, simply a HTML file being served directly).
+But that would loose all the charm that using .txt files gives... There is 
+something great about visiting a website and it simply being a text file, no 
+tags, no style, that feels amazing to me. Even writing isn't the same. Because 
+sure, I could write in markdown files and restrict myself to only write text, 
+but that would just be frustrating. When I write in a .txt file, I can't make 
+the choice to add images or links, they just don't exist. In a markdown file, 
+they would be right there, looking at me like sirens, there would be so little 
+reasons not to use them that it would be hard to avoid.
+I'm afraid that transforming this website into a more accessible version would 
+void it of it's soul, and of my willingness to write on it. Which in turn would 
+mean that the website would not be accessible at all anymore since it would 
+cease to exist.
+
+Maybe I'm overthinking all this, I started this post not knowing what I was 
+going to talk about and now I'm here. Maybe this is just a thing for me that 
+other people can enjoy as a side effect, many great places exist that aren't 
+accessible to everyone. Many cool art pieces can't work for everyone, and 
+that's ok. But as much as it's ok, it is also sad, I wish everything was 
+accessible to everyone, and I'm not sure I want my thing to be part of the not 
+accessible ones. I know I couldn't ever please everyone, and as far as I know, 
+I'm the only one reading these words, so I might be worrying for nothing.
+
+Anyway, time to go get food, I'll come back here later to rant on some other 
+thing.
+
+- [^1] My heat tolerence is awful, above 27°C and I feel like crap.
+- [^2] Not that I'm doing much of that on my main website, but still a little 
+more than here.
+- [^3] At least right now.
+
 ED AND TAKING THE TIME
 
 11-08-2025
