@@ -1,1 +1,398 @@
-/Users/theoleonet/Library/Mobile Documents/com~apple~CloudDocs/content.txt
+Welcome to my txt only website! 
+
+Search for "How to use this website" (⌘-F on Mac and Ctrl+F on Windows) for 
+tips and tricks as well as explanation on how this website works.
+
+WRITING ON THE PHONE
+
+16-08-2025
+
+Lately, I've been trying to write more, and it has been going alright. At 
+first, it was really hard, I was second guessing myself a lot and it all felt 
+very messy. 
+But slowly, my brain started to change. Now, as I go about my day, I have ideas 
+that pop up into my mind, a sentence that fits very well with what I want to 
+say or an example to explain some concept. 
+In the beginning, I was trying to remember stuff, then I started writing it 
+down in my notes app, but I feel like it's time I go one step further and start 
+writing posts on my phone.
+
+So I went on a little bit of a hunt to find a perfect setup. What I do is I 
+sync the text file in iCloud Drive, symlink it to this website's public folder 
+and edit it in an app called "Subtext"[^1].
+
+If you also write things, I would be pleased to chat with you about methods for 
+writing at hello@theoo.dev
+
+- [^1] It's a free app that allows you to open and edit .txt files from any 
+folder on your phone. It is really similar to textedit.
+
+NOT WANTING TO DO ANYTHING
+
+15-08-2025
+
+Topics: Life
+
+I'm on holiday, it's hot, too hot[^1] and I don't want to do anything.
+So I'm forcing myself to write a little something on this blog while I wait for 
+the time to go get dinner, Vegan Chineese takeout for those who like details. I 
+don't know where this is gonna go, the rule for this page was that there is no 
+minimum length per post, but so far I've been pretty generous on my word 
+counts, so I might just talk about stuff for a while and see where this takes 
+us.
+Maybe a good subject would be this website. I'm starting to like it more and 
+more, it has been freeing in a creative way to have a place to write down 
+whatever I want without having to polish anything[^2], I just sit at my 
+computer and write whatever goes through my mind.
+This is also a great website for many other reasons, it is tiny[^3] so that 
+means people don't have to download a lot of stuff to read what I have to say, 
+it looks great, at least to me. I like the plain text vibe, I just wish there 
+was some more line height and maybe a tiny bit more padding, but I can deal 
+with this. It also is super low maintenance, plaintext is probably not gonna 
+stop working any time soon, and I don't really have to update anything else 
+appart from the content.
+
+But the problem of this website is that it isn't accessible. All the content is 
+inside a pre tag, this makes it so that screen readers have no clue what's 
+going on, they will just read everything in the same way. No infos about lists, 
+or dates, no quick skip link, no links for footnotes, no metadata to give 
+context,... The plaintext, monospaced cramped aesthetic, which I find so cool, 
+can also be a challenge to people with cognitive difficulties, the lack of 
+visual queues and the monotony of it all can make it impossible for them to 
+read comfortably. And I'm sure there are so many other things I'm not thinking 
+about that make this website not accessible.
+
+And I don't want it to be this way, especially since there is a simple and 
+obvious solution, write the website using markdown and parse it as HTML before 
+uploading it. That would require some refactoring and make the code even 
+simpler (no more PHP, simply a HTML file being served directly).
+But that would loose all the charm that using .txt files gives... There is 
+something great about visiting a website and it simply being a text file, no 
+tags, no style, that feels amazing to me. Even writing isn't the same. Because 
+sure, I could write in markdown files and restrict myself to only write text, 
+but that would just be frustrating. When I write in a .txt file, I can't make 
+the choice to add images or links, they just don't exist. In a markdown file, 
+they would be right there, looking at me like sirens, there would be so little 
+reasons not to use them that it would be hard to avoid.
+I'm afraid that transforming this website into a more accessible version would 
+void it of it's soul, and of my willingness to write on it. Which in turn would 
+mean that the website would not be accessible at all anymore since it would 
+cease to exist.
+
+Maybe I'm overthinking all this, I started this post not knowing what I was 
+going to talk about and now I'm here. Maybe this is just a thing for me that 
+other people can enjoy as a side effect, many great places exist that aren't 
+accessible to everyone. Many cool art pieces can't work for everyone, and 
+that's ok. But as much as it's ok, it is also sad, I wish everything was 
+accessible to everyone, and I'm not sure I want my thing to be part of the not 
+accessible ones. I know I couldn't ever please everyone, and as far as I know, 
+I'm the only one reading these words, so I might be worrying for nothing.
+
+Anyway, time to go get food, I'll come back here later to rant on some other 
+thing.
+
+- [^1] My heat tolerence is awful, above 27°C and I feel like crap.
+- [^2] Not that I'm doing much of that on my main website, but still a little 
+more than here.
+- [^3] At least right now.
+
+ED AND TAKING THE TIME
+
+11-08-2025
+
+Topics: Code, Editor, Thoughts
+
+My favourite code editor is ed. For those who don't know, ed is one of the 
+first editors to have been made, it's part of a class of editors called "line 
+editors", which means that you are only editing complete lines of text. You can 
+append after a line, insert before it or change a specific part using regexes, 
+but you cannot put your cusor on a word and edit there. Ed doesn't even have a 
+cursor.
+Ed is naturally limiting, it can only do one thing, edit a file. No file 
+searching, no scrolling, no infinite undo/redo, no diagnostics or code actions. 
+If you want things like these, you have to do them in your terminal[^1]. If you 
+make a typo while typing a line of code? You can't go back with your arrow keys 
+to fix it, you need to validate the line with the typo and then correct it 
+using a regex. (Or you could rewrite the whole line if that's what you fancy).
+And these limitations happen because ed assumes you know what you are doing. 
+You don't need to search for files if you know what you want to edit, you don't 
+need ed to tell you you've misspelled a variable name, because you haven't 
+misspelled it. And if you really aren't confident with yourself, you can use 
+external programs to check after you, ed doesn't kow better than you, it can 
+only edit text.
+
+And for many reasons, I love these limitations. For one, ed is fast, it doesn't 
+have a graphical interface, so of course it is quick to load a file. Also I 
+love that ed forces me to be very sure of what I'm about to do, this forces me 
+to think before I act and often produces cleaner code that I don't have to 
+refactor later. Often using external cli programs to do things is faster than 
+whatever implementation my regular editor would have. A great example is for 
+finding a file, instead of using my editor's fuzzy finder, I can simply do a 
+little `ed $(fzf)`, instead of waiting for diagnostics to refresh, I can run 
+`php -l my-file.php` and find out exactly where that goddamn missing dollar 
+sign is.
+Ed forces you to learn your basic unix tools, and eventually you figure out how 
+powerful they are, you become pro at man pages and old stack overflow threads. 
+It also makes you learn a ton about regexes, which in my opinion are one of the 
+most essential and the funniest parts of software development. And ed's regex 
+engine isn't even featurefull, it lacks a ton of modern features like using 
+`\U` to uppercase a group, but it forces you to get creative with your regexes. 
+Which remember, you can't fail at writing, or you will have to rewrite them 
+fully again and can only undo once.
+
+But despite my love for this mighty editor, I can't really use it, at least not 
+in my day to day work. Because for all it's beautiful quirks and complex 
+simplicity, ed can never beat the speed of modern editors. Because, obviously 
+it is faster to use a search input to find a function name project wide rather 
+than manually use grep, obviously it is faster to fix a typo by clicking next 
+to it and erasing it rather than writing a regex to fix it, obviously it's 
+faster to use a code action to rename something rather than grep for all the 
+places where it's used and manualy navigate to each one[^2].
+And in our world, speed is the second thing that matters the most after money. 
+I think that this is pretty sad, I wish our priorities weren't set on economic 
+growth all the time but rather on human happiness growth. I wish it would be 
+alright for me to go slower and use ed, that I wouldn't have to think about 
+rentability and only think about doing good work that is also fun.
+I'm afraid that us all as humans are heading in the wrong general direction, 
+and none of us seem to know how to stop it. A lot of us don't want to stop what 
+we are doing at all, it gave them a better life than most humans have had 
+throughout history, and many other people are just not aware or their life is 
+too complex to take the time to think about these things.
+Time is our most valuable asset, and we are giving it away without the 
+slightest thought. Giving it away to a job that allows us to eat and have a 
+roof[^3], to social medias, television and other fun but unfulfilling 
+activities, to going places in highly inneficient modes of public transport or 
+in polluting and isolating cars. We should stop doing this[^4], try to live a 
+more sensible life, a life where time and money aren't the two dominating 
+forces.
+
+[^1] - Which you can call inside of ed using the "!" operator.
+[^2] - To be fair to ed there, if the occurences are in the same file, you can 
+edit them all at once.
+[^3] - It is crazy to me that things like these which are in the UDHR aren't 
+being enforced on governments somehow. 
+[^4] - Though I admittedly don't have any clue how.
+
+ADULT SKILLS
+
+10-08-2025
+
+Topics: Life, Thoughts, Society
+
+I have been considered an adult for a few years now, that's to say I've had my 
+own place away from my mother's for a while. And I've noticed something, there 
+is a certain amount of things you aren't taught in pre-adult life, well maybe 
+you were but I wasn't and I know many other people who weren't.
+Then at some point you become an adult to the world, and you eventually have to 
+face these things. Generally, they aren't hard things, it's stuff like cleaning 
+the shower drain, fixing a tripped circuit breaker, how long you can store food 
+in the fridge, how to pay your taxes, should you drill in this wall or will you 
+hit an electrical cable, how to get rid of stuff that doesn't fit in the 
+trash,...
+And for some reason, you have to figure these out on your own. Sure, you can 
+maybe call your family or a friend, you have access to the internet and these 
+days, you can even ask AI. But still, why was I never taught these things? Why 
+aren't we taught, be it by our parents (at least mine) or by school, the stuff 
+that will be useful in our actual life?
+And I can't even say it's only something about nowadays society, when talking 
+about it to older persons, the general concensus is that they also had to 
+figure it out on their own.
+
+Maybe it's something inherently human, we have always relied on other humans 
+for help, therefore there was never really a need to teach such things, you 
+could always ask someone.
+ Which would also explain why the stuff we are taught in school isn't the 
+useful one but the rest. I couldn't have asked my Mom or my neighbour to 
+explain some weird Chemistry concept, they probably wouldn't have had a clue or 
+just a rough idea. Because I don't really need a teacher to tell me how to 
+clean my toilets in the correct way.
+ Yet I can't help but shake the feeling that in a more and more isolated 
+world[^1] we might not be able to rely on other people as much. Having to ask a 
+neighbour for something is a hell of an effort, because I hardly know them, 
+only from crossing in the hallways. Calling my family for help feels like a 
+reach when I haven't seen them in months or barely for a couple hours [^2]. And 
+sure there is internet and AI, and they have gotten me out of many situations 
+before, but as useful as these tools are, it seems to me that they also are the 
+primary cause of the lessening of human interactions.
+
+ So what should we do as humans? Should we teach useful life things in school 
+instead of the more work-life/make money stuff we are taught? Should we try to 
+rebuild link with our family, friends and neighbourhood? Maybe live together 
+for longer like they used to do? Take care of one another more? I'm not sure of 
+any of these though I have a pretty positive opinion on most of them.
+ Maybe I'm wrong as well, and figuring these things out by yourself is not as 
+much of a big deal as I make it out to be. After all, none of these things has 
+ever taken me more than a couple hours to figure out. I don't know what I 
+really think of all of this, and there are many topics addressed in this text 
+that I would like to revisit later, but I think that for now I'm gonna try to 
+have a more sociable life and talk to other humans more and less to the 
+computer.
+
+ [^1] - At least that's how I feel in my life. More isolated than the people 
+before me, partially by my own fault.
+ [^2] - Mostly a me problem this one, but I feel that modern life leaves you 
+with little time to spare for yourself, therefore even less for family. I guess 
+this depends on your values and priorities though.
+
+BROWSERS
+
+09-08-2025
+
+Topics: Browsers, Life
+
+Since I was born in the early 2000s, I've been around browsers most of my life. 
+The first one was Firefox, it was the one installed on the family computer and 
+I didn't even know there were other browsers at the time, to be fair, there was 
+no difference between the browser, the search engine and internet in my mind. 
+Then I discovered Internet Explorer while trying to kill the time at my 
+grandparents'. I would play random flash games and watch let's plays of Mario 
+Kart Wii on Youtube.
+At some point, Chrome replaced Firefox on the home computer which had since 
+become a laptop, and would even replace my grandparents' trusty IE. For many 
+years after that, all that existed was Chrome, maybe Safari for the odd times 
+where I used a Mac at school or at some Aunt's place, but I knew no better.
+
+Somehow along the path of my life, I ended up studying web development, and 
+that's when the problems started. Because you see, before that, a browser was 
+just a box with tabs that allowed me to access the internet, nothing more, 
+nothing less. But then it became a tool, and a very important one as well, I 
+wanted it to look good since I would spend most of my days there, but also to 
+be fast and support many features. So at first I downloaded the three main 
+browsers, to be able to test my websites properly, Firefox, Chrome and Safari, 
+and I started to have preferences. Safari was the sleek good looking one, but 
+so many websites would break when they encountered it and the dev tools sucked. 
+Chrome was the web development beast, it didn't look too bad, its dev-tools 
+were fantastic and it supported every feature under the sun, but it was run by 
+Google... yuck. Firefox, was the ugly one, I hate how base Firefox looks, but 
+at least Mozilla foundation felt less bad than Google or Apple and it supported 
+most features with good enough dev-tools.
+I was torn, constantly switching between the three for different tasks, never 
+feeling at home anywhere and I wanted it to stop. So I started looking online 
+for alternatives, and there were many.
+
+That's when my browser frenzy got started, at some point I had 22 different 
+browsers installed on my computer. There were the minimal ones like Min, the 
+featureful ones like Vivaldi, Opera or Orion, the plethora of privacy focused 
+forks, LibreWolf, Mullvad Browser, Waterfox, Ungoogled chromium, Brave, 
+Throium,... a bunch of Vim inspired ones like Vieb or Qutebrowser. I even tried 
+to use terminal based browsers like Lynx or w3m[^1] but quickly gave up on 
+these.
+I was never satisfied, always looking for a good balance between privacy, my 
+love for the keyboard and good looks. And that's when a new name started to 
+rise discreetly., Arc.
+
+See, Arc definitely didn't tick the privacy nor the keyboard centric box, but 
+it had such good looks[^2] that I couldn't keep looking away. I had it laying 
+on my computer for about a year, using it on an off, never feeling quite at 
+ease, but then it grew on me. At some point I had accepted that what mattered 
+most to me was the way my browser looked[^3] and the ease with which I could 
+use it to develop websites over the privacy aspect. And so I became a happy Arc 
+user, there was little to complain about, after so many attempts and years of 
+searching, I finally had found a browser that I would stick with in the long 
+run.
+But then "The Browser Company" decided to stop working on Arc, and that sucked. 
+So like most I moved to Zen, and Zen is great. But a side effect of the Arc 
+breakup is that it re-ignited my frenetic browser search. The novelty of Arc, 
+with it's thursday updates had been able to keep my mind quiet, always having 
+something new to try, but now I don't have this safeguard anymore.
+So I went back to previous browsers I had really liked, Orion, LibreWolf and 
+even Chrome... But the Arc way had poisoned my mind, not being able to open 
+something in glance? No folders? No nice catchy animations absolutely 
+everywhere? These had all become necessary things in my way of interacting with 
+the internet.
+Fortunately, Zen ticks most of these boxes, and it is also open source and more 
+private. So I keep using it as my day to day browser while at the same time 
+looking around for alternatives. The thing is, now that I'm not blinded by Arc 
+anymore, I realized that I actually don't like the sidebar that much. It's 
+alright, but I love the look of top tabs and the usability of them. And of 
+course, Zen team has already said that they don't plan to support top tabs, 
+ever.
+"The Browser Company"'s new browser, Dia, could have been a great replacement, 
+but even if it ever reaches feature parity with Arc, I still don't trust "The 
+Browser Company" anymore and I hate the AI and the monetary aspect of it.
+
+So here I am, stuck in this browser landscape, with so many choices but none 
+that perfectly fits me. Maybe it's time for me to accept that nothing will ever 
+be perfect, and to be at peace with using a browser that is more than good 
+enough. To stop losing time switching and setting up different apps over and 
+over again. I think that's a lesson for my life in general, stop wanting to 
+always change things up, and be satisfied by whatever I have as long as it 
+works.
+
+[^1] — On which this webpage works really well btw.
+[^2] — Debatable opinion, but as much as I dislike "The Browser Company", their 
+designers do a pretty dang good job.
+[^3] — Again, very debatable, I don't always feel comfortable with this opinion.
+
+ALL TOPICS
+
+- Browsers 
+- Life
+- Thoughts
+- Society
+- Code
+- Editor
+
+HOW TO USE THIS WEBSITE:
+
+- You can search for stuff by using your computers default search (⌘-F on Mac 
+and Ctrl+F on Windows).
+
+- Each post is ordered from the most recent to the oldest. 
+
+- Each post has at least one topic, you can find the list of all topics by 
+searching for "All topics".
+
+HOW DOES THIS WORK:
+
+It is actually incrediby simple!
+This website is a simple `.txt` file being rendered by your browser, because 
+browsers can do that and it doesn't look too bad.
+There is only a super thin layer of PHP used to serve the file at the `/` path 
+and to tell the browser to use UTF-8 encoding to be able to render emojis and 
+diacritics among others.
+
+```
+// index.php
+
+<?php
+
+header('Content-Type: text/plain; charset=utf-8');
+
+readfile(__DIR__.'/content.txt');
+exit;
+```
+
+There is also a tiny Makefile that is used for wraping the lines at 80ch which 
+improves readability.
+It uses the `fold` utility which is there by default on unix systems.
+
+```
+# Makefile
+
+CONTENT = ./public/content.txt
+BACKUP = ./content.txt.bak
+
+wrap:
+	cp $(CONTENT) $(BACKUP)
+	TEMP=$$(mktemp) && \
+	fold -s -w 80 $(CONTENT) > $$TEMP && \
+	mv $$TEMP $(CONTENT)
+```
+
+You can find the source code on GitHub — https://github.com/theokbokki/txt
+
+WHY DO THIS?
+
+Because I like simple stuff. It is easy to make, easy to maintain, easy to use, 
+weighs nothing, loads fast and it looks alright. 
+What I want is a place to share my thoughts in writing, nothing more nothing 
+less and this can easily achieve that.
+I guess that not having images or links is a bit of a bummer, but I'm fine with 
+this, I have another much more complete website for fancy stuff.
+
+LEGAL:
+
+No cookies, no tracking, do whatever you want with this as long as you don't 
+deform what I say. If you have a problem with something on this website, you 
+can contact me at hello@theoo.dev.
