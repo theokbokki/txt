@@ -7,4 +7,5 @@ wrap:
 	cp $(CONTENT) $(BACKUP)
 	TEMP=$$(mktemp) && \
 	fold -s -w 80 $(CONTENT) > $$TEMP && \
-	mv $$TEMP $(CONTENT)
+	cat $$TEMP > $(CONTENT) && \
+	rm $$TEMP
